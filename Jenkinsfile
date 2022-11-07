@@ -30,8 +30,9 @@ pipeline {
       }
       stage ('Deploy') {
         steps {
-          sh '/usr/local/bin/eb deploy {{url-shortener-d20-main-dev}}'
+          sh '/var/lib/jenkins/.local/bin/eb deploy {{url-shortener-d20-main-dev}}'
         }
       }
     }
   }
+}
