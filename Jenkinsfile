@@ -30,7 +30,7 @@ pipeline {
       }
       stage ('Deploy') {
         steps {
-          sh '/var/lib/jenkins/.local/bin/eb deploy {{url-shortener-d2-dev}}'
+          sh '/usr/local/bin/eb deploy {{url-shortener-d2-dev}}'
         }
       }
     }
