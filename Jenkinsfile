@@ -27,6 +27,11 @@ pipeline {
         }
        
       }
-    } 
+    
+    stage ( 'Deploy' ) {
+      steps {
+        sh '/var/lib/jenkins/.local/bin/eb deploy {{/var/lib/jenkins/workspace/url-shortener-d2_main}}'
+      } 
+    }
   }
 }
